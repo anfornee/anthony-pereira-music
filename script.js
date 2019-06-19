@@ -56,3 +56,28 @@ document.addEventListener('mousemove', function checkHover() {
     scrollIcon.classList.remove("pulse");
   }
 });
+
+////////////* Screen Size Nav Response *///////////////
+let menuIcon = document.getElementById('menuIcon');
+menuIcon.addEventListener('click', function rotateMenu(e) {
+  if (menuIcon.className == "clicked") {
+    menuIcon.classList.toggle("clicked");
+  } else {
+    menuIcon.classList.toggle("clicked");
+  }
+  e.preventDefault();
+});
+
+var nav = document.querySelector("nav"),
+  navToggle = document.querySelector(".skip");
+if (navToggle) {
+  navToggle.addEventListener("click",
+    function (e) {
+      if (nav.className == "open") {
+        nav.className = "";
+      } else {
+        nav.className = "open";
+      }
+      e.preventDefault();
+    }, false);
+};

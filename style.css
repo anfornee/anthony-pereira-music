@@ -11,8 +11,15 @@ color palette
 
 */
 
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 body {
@@ -64,6 +71,16 @@ body {
     color: lightgrey;
 }
 
+.skip {
+    display: none;
+}
+
+.skip img {
+    width: 2.75em;
+    height: auto;
+    filter: invert(100%);
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -81,8 +98,7 @@ body {
 
 .intro {
     /* background: #F4CAE0; */
-    background-image: url("images/anthony_sang.jpg");
-    left: 0px;
+    background-image: url("images/IMG_4968.JPG");
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -181,6 +197,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4em;
 }
 
 .aboutContainer {
@@ -327,4 +344,43 @@ footer {
 
 .socialIcons img:hover {
     transform: rotate(360deg);
+}
+
+@media (max-width: 1500px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 736px) {
+    .header h1 {
+        margin-left: .5em;
+        font-size: 1.75em;
+    }
+    iframe {
+        display: none;
+    }
+
+    .skip {
+        display: block;
+        position: relative;
+        margin-right: .75em;
+        transition: 1s;
+    }
+
+    .menuIcon {
+        transform: inherit;
+        transition: .4s;
+    }
+
+    #menuIcon.clicked {
+        transform: rotate(90deg);
+        transition: .4s;
+    }
+
+    #navMenu.open {
+        max-height: 20em;
+        display: inherit;
+    }
+    #navMenu {
+        display: none;
+    }
 }
