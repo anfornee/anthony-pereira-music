@@ -1,51 +1,53 @@
 ////////////* Contact Form *///////////////
 $(document).ready(function () {
-    $('.submit').click(function (event) {
+  $('.submit').click(function (event) {
 
-        let email = $('.email').val();
-        let message = $('.message').val();
-        var statusElm = $('.status');
-        statusElm.empty();
+    let email = $('.email').val();
+    let message = $('.message').val();
+    var statusElm = $('.status');
+    statusElm.empty();
 
-        if (email.length > 5 && email.includes('@') && email.includes('.')) {
-            statusElm.remove;
-        } else {
-            event.preventDefault();
-            statusElm.append('*Invalid email </br>');
-        };
+    if (email.length > 5 && email.includes('@') && email.includes('.')) {
+      statusElm.remove;
+    } else {
+      event.preventDefault();
+      statusElm.append('*Invalid email </br>');
+    };
 
-        if (message) {
-            statusElm.remove;
-        } else {
-            event.preventDefault()
-            statusElm.append('*Must include a message </br>');
-        };
+    if (message) {
+      statusElm.remove;
+    } else {
+      event.preventDefault()
+      statusElm.append('*Must include a message </br>');
+    };
 
-    })
+  })
 });
 
-////////////* Sticky Header *///////////////
-window.onscroll = function () { myFunction() };
+////////////* Sticky Header and Scroll Button Hide/Reveal *///////////////
+window.onscroll = function () { headerClass(), scrollIcon() };
 
 var header = document.getElementById("header");
 
 var sticky = header.offsetTop;
 
-function myFunction() {
+let scrollIcon = document.getElementById('moreStuff');
+
+function headerClass() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    scrollIcon.classList.add("scrollButtonHide");
   } else {
     header.classList.remove("sticky");
+    scrollIcon.classList.remove("scrollButtonHide");
   }
 };
 
 ////////////* Hover Over Scroll Icon *///////////////
 function isHover(e) {
   return (e.parentElement.querySelector(':hover') === e);
-}
+};
 
-
-let scrollIcon = document.getElementById('moreStuff');;
 document.addEventListener('mousemove', function checkHover() {
   var hovered = isHover(scrollIcon);
   if (hovered) {

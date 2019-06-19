@@ -29,14 +29,36 @@
             <hr>
             <h3>How awkward</h3>
         </div>
-        <div class="scrollButton">
-            <a href="#about"><img id="moreStuff" src="images/scroll-arrow-to-down.png" /></a>
+        <div id="scrollButton" class="scrollButton">
+            <a href="#about"><img class="moreStuff" id="moreStuff" src="images/scroll-arrow-to-down.png" /></a>
         </div>
     </section>
 
     <section id="about" class="about">
-        <div>
-            <h1>This will have some info about me at some point!</h1>
+        <div class="aboutContainer">
+            <div class="aboutText">
+                <h1>I grew up surrounded by music.</h1>
+                <h3>
+                    For as long as I can remember every part of my
+                    life has included music. I am in love with it and it's
+                    ability to tell a story. Music is a language that
+                    every person on this planet can understand and I use
+                    that to tell them something.
+                </h3>
+                <hr>
+                <h3>
+                    Personal projects will always be something that I work on but I love
+                    to partner with people that also have a passion for telling
+                    great stories. I've spent some time engineering and mixing
+                    and collaborating with other songwriters. Music can be best heard
+                    when it is attached to something that is seen. Having my music be a
+                    part of incredible visuals is one of my favorite things. Please reach 
+                    out if you have a story you want to tell in anyway.
+                </h3>
+            </div>
+            <div class="aboutImg">
+                <img src="images/anthony_sang.jpg" />
+            </div>
         </div>
     </section>
 
@@ -46,6 +68,11 @@
         <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/3881714&color=%2364a6bd&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
         </iframe>
+        <div class="videos">
+            <h2>For Film</h2>
+            <iframe src="https://player.vimeo.com/video/331107595" width="640" height="360" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
     </section>
 
     <section id="contact" class="contact">
@@ -55,13 +82,17 @@
                 <input type="email" class="email" name="email" placeholder="Your email">
                 <textarea class="message" name="message" placeholder="Details..."></textarea>
                 <div class="status"></div>
-                <button class="submit" type="submit">Send Test</button>
-              </form>
+                <button class="submit" type="submit">Submit</button>
+            </form>
         </div>
     </section>
 
     <footer>
-
+        <div class="socialIcons">
+            <a target="_blank" href="https://www.instagram.com/anthonypereiramusic/"><img src="/images/instagram-logo.png" /></a>
+            <a target="_blank" href="https://twitter.com/theanfornee"><img src="/images/twitter-logo-button.png" /></a>
+            <a target="_blank" href="https://soundcloud.com/anthonypereiramusic"><img src="/images/soundcloud.png" /></a>
+        </div>
     </footer>
     <script src="script.js"></script>
     <script src="zenscroll-latest/zenscroll-min.js"></script>
