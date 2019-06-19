@@ -1,3 +1,29 @@
+////////////* Contact Form *///////////////
+$(document).ready(function () {
+    $('.submit').click(function (event) {
+
+        let email = $('.email').val();
+        let message = $('.message').val();
+        var statusElm = $('.status');
+        statusElm.empty();
+
+        if (email.length > 5 && email.includes('@') && email.includes('.')) {
+            statusElm.remove;
+        } else {
+            event.preventDefault();
+            statusElm.append('*Invalid email </br>');
+        };
+
+        if (message) {
+            statusElm.remove;
+        } else {
+            event.preventDefault()
+            statusElm.append('*Must include a message </br>');
+        };
+
+    })
+});
+
 ////////////* Sticky Header *///////////////
 window.onscroll = function () { myFunction() };
 

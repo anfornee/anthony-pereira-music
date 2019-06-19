@@ -201,9 +201,9 @@ body {
     width: 400px;
 }
 
-.contact input {
+.email {
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     text-align: center;
     font-size: 1.7em;
     border-radius: 15px;
@@ -212,7 +212,9 @@ body {
     box-shadow: 4px 4px 5px 1px lightgray;
 }
 
-.contact textarea {
+.message {
+    margin-bottom: 1.5em;
+    min-height: 8em;
     resize: none;
     width: 100%;
     text-align: left;
@@ -223,8 +225,7 @@ body {
     box-shadow: 4px 4px 5px 1px lightgray;
 }
 
-.contact button {
-    margin-top: 2em;
+.submit {
     font-size: 1.5em;
     padding: .6em;
     border-radius: 15px;
@@ -234,7 +235,7 @@ body {
     transition: .7s;
 }
 
-.contact button:hover {
+.submit:hover {
     background-color: lightgray;
 }
 

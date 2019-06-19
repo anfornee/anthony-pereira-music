@@ -2,10 +2,12 @@
 <html>
 
 <head>
+    <title>Anthony Pereira Music</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" />
-    <title>Anthony Pereira Music</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="form.js">  </script>
 </head>
 
 <body>
@@ -49,19 +51,18 @@
     <section id="contact" class="contact">
         <div>
             <h1>Contact Me</h1>
-            <form>
-                <input placeholder="Name" />
-                <input placeholder="Email" />
-                <textarea rows="8" placeholder="Additional information..."></textarea>
-                <button type="submit">Submit</submit>
-            </form>
+            <form method="POST" action="https://formspree.io/anthony_pereira@sbcglobal.net">
+                <input type="email" class="email" name="email" placeholder="Your email">
+                <textarea class="message" name="message" placeholder="Details..."></textarea>
+                <div class="status"></div>
+                <button class="submit" type="submit">Send Test</button>
+              </form>
         </div>
     </section>
 
     <footer>
 
     </footer>
-
     <script src="script.js"></script>
     <script src="zenscroll-latest/zenscroll-min.js"></script>
 </body>
