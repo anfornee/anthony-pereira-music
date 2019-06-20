@@ -25,7 +25,7 @@ $(document).ready(function () {
 });
 
 ////////////* Sticky Header and Scroll Button Hide/Reveal *///////////////
-window.onscroll = function () { headerClass(), scrollIcon() };
+window.onscroll = function () { headerClass() };
 
 var header = document.getElementById("header");
 
