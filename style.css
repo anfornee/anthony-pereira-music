@@ -448,17 +448,21 @@ footer a {
         transform: rotate(-90deg);
         transition: .4s;
     }
+    #menuIcon.menuIconInvert {
+        filter: invert(0%);
+    }
     .navMenu {
         transition: .3s;
     }
     #navMenu.open {
         margin-left: .2em;
-        margin-right: 3em;
-        padding: .5em;
+        margin-right: 3.5em;
         right: 0;
         opacity: 1;
     }
     #navMenu {
+        width: 70%;
+        margin-right: 10em;
         opacity: 0;
         transition: .3s;
     }

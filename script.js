@@ -24,7 +24,7 @@ $(document).ready(function () {
   })
 });
 
-////////////* Sticky Header and Scroll Button Hide/Reveal *///////////////
+////////////* Sticky Header - Scroll Button Hide/Reveal - menuIcon Invert *///////////////
 window.onscroll = function () { headerClass() };
 
 var header = document.getElementById("header");
@@ -33,13 +33,17 @@ var sticky = header.offsetTop;
 
 let scrollIcon = document.getElementById('moreStuff');
 
+let menuIcon = document.getElementById('menuIcon');
+
 function headerClass() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
     scrollIcon.classList.add("scrollButtonHide");
+    menuIcon.classList.add("menuIconInvert");
   } else {
     header.classList.remove("sticky");
     scrollIcon.classList.remove("scrollButtonHide");
+    menuIcon.classList.remove("menuIconInvert");
   }
 };
 
@@ -58,7 +62,6 @@ document.addEventListener('mousemove', function checkHover() {
 });
 
 ////////////* Screen Size Nav Response *///////////////
-let menuIcon = document.getElementById('menuIcon');
 menuIcon.addEventListener('click', function rotateMenu(e) {
   if (menuIcon.className == "clicked") {
     menuIcon.classList.toggle("clicked");
