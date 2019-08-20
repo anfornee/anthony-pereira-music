@@ -24,11 +24,11 @@ html {
 
 body {
     width: 100vw;
-    /* margin-top: 0px;
-    margin-left: 0px; */
+    height: 100vh;
     margin: 0;
     font-family: Avenir;
     scroll-behavior: smooth;
+    background-color: #243B4A;
 }
 
 .header {
@@ -139,13 +139,6 @@ body {
 .scrollButtonHide {
     opacity: 0;
 }
-
-/* .intro img {
-    bottom: .8em;
-    width: 40px;
-    height: 30px;
-    filter: invert(100%);
-} */
 
 .moreStuff {
     bottom: .8em;
@@ -314,7 +307,7 @@ body {
     border-radius: 15px;
     border: none;
     background-color: ivory;
-    transition: .7s;
+    transition: .2s;
 }
 
 .submit:hover {
@@ -323,14 +316,17 @@ body {
 
 footer {
     background: #243B4A;
-    margin-bottom: -10px;
+    margin: 0;
     width: 100vw;
-    height: 8em;
+    max-height: 100vh;
+    padding-top: 1.5em;
+}
+
+.footer {
+    height: 7em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 1.5em;
 }
 
 footer a {
@@ -353,11 +349,19 @@ footer a {
     height: auto;
     filter: invert(100%);
     border-radius: 50%;
-    transition: 1s;
 }
 
 .socialIcons img:hover {
-    transform: rotate(360deg);
+    animation: teeter 1.5s infinite;
+}
+
+@keyframes teeter {
+    25% {
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
 }
 
 @media (max-width: 1500px) {}

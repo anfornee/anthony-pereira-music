@@ -23,6 +23,14 @@
 		"oAP": "/build/build",
 		"oF": 0
 		},
+	"/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/CNAME",
+		"oF": 0
+		},
 	"/images/anthony_sang.jpg": {
 		"ft": 16384,
 		"iS": 1519024,
@@ -42,6 +50,17 @@
 		"oAP": "/build/images/favicon.ico",
 		"oF": 0
 		},
+	"/images/IMG_4968.JPG": {
+		"ft": 16384,
+		"iS": 392173,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/images/IMG_4968.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/instagram-logo.png": {
 		"ft": 32768,
 		"iS": 16441,
@@ -50,6 +69,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/menuIcon.png": {
+		"ft": 32768,
+		"iS": 1528,
+		"oA": 0,
+		"oAP": "/build/images/menuIcon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -93,6 +123,14 @@
 		"oA": 0,
 		"oAP": "/build/index.html",
 		"oF": 0
+		},
+	"/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/build/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/script.js": {
 		"bF": 0,
