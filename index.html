@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script src="form.js">
     </script>
 </head>
 
@@ -17,19 +16,30 @@
         <a href="#intro">
             <h1>Anthony Pereira</h1>
         </a>
-        <div class="skip">
-            <a href="#header">
+        <div id='hamMenu' class="skip">
+            <!-- <a href="#header">
                 <img class="menuIcon" id="menuIcon" src="./images/menuIcon.png">
-            </a>
+            </a> -->
+            <div id='bar-1' class='menu-bar'></div>
+            <div id='bar-2' class='menu-bar'></div>
+            <div id='bar-3' class='menu-bar'></div>
         </div>
         <nav id="navMenu" class="navMenu">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">about</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">contact</a>
         </nav>
     </div>
 
     <section id="intro" class="intro">
+        <div class='out-now-container'>
+            <div class='new-album'>
+                <h2>New Album</h2>
+            </div>
+            <div class='out-now'>
+                <h2>Out Now</h2>
+            </div>
+        </div>
         <div id="scrollButton" class="scrollButton">
             <a href="#about"><img class="moreStuff" id="moreStuff" src="images/scroll-arrow-to-down.png" /></a>
         </div>

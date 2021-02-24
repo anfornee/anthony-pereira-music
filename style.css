@@ -11,515 +11,670 @@ color palette
 
 */
 
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    font-family: Avenir;
-    scroll-behavior: smooth;
-    background-color: #243B4A;
+  width: 100vw;
+  margin: 0;
+  font-family: Avenir;
+  background-color: #243B4A;
 }
 
 .header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 5em;
-    background: #180429;
-    transition: .7s;
-}
-
-.header a {
-    text-decoration: none;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5em;
+  transition: .7s;
+  z-index: 1;
 }
 
 .header h1 {
-    margin-left: 100px;
-    color: whitesmoke;
+  margin-left: 100px;
+  color: whitesmoke;
 }
 
 .header nav {
-    display: flex;
-    justify-content: space-around;
-    width: 450px;
-    margin-right: 100px;
-    font-size: 1.2em;
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+  margin-right: 100px;
+  font-size: 1.2em;
 }
 
-.header nav a {
-    color: lightslategray;
-    text-decoration: none;
-    transition: .4s;
+.header a {
+  color: #fff;
+  text-decoration: none;
+  transition: .25s;
 }
 
-.header nav a:hover {
-    color: lightgrey;
+.navMenu a:hover {
+  opacity: .55;
 }
 
 .skip {
-    display: none;
+  display: none;
 }
 
 .skip img {
-    width: 2.75em;
-    height: auto;
-    filter: invert(100%);
+  width: 2.75em;
+  height: auto;
+  filter: invert(100%);
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: whitesmoke;
 }
 
 .sticky h1 {
-    color: black;
+  color: black;
 }
 
 .sticky nav a {
-    color: rgb(56, 56, 56);
+  color: rgb(56, 56, 56);
 }
 
 .intro {
-    background-image: url("images/IMG_4968.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-image: url("images/Transition_Art_notext_2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .intro div {
-    text-align: center;
-    color: whitesmoke;
+  text-align: center;
+  color: whitesmoke;
 }
 
 .intro h1 {
-    font-size: 5em;
-    margin-bottom: 0;
+  font-size: 5em;
+  margin-bottom: 0;
 }
 
 .intro h3 {
-    font-size: 2em;
-    margin-top: .7em;
+  font-size: 2em;
+  margin-top: .7em;
 }
 
 .intro hr {
-    width: 700px;
-    border: .5px solid whitesmoke;
+  width: 700px;
+  border: .5px solid whitesmoke;
+}
+
+.out-now-container {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+
+.new-album {
+  width: 50%;
+  height: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.new-album h2 {
+  position: absolute;
+  opacity: 0;
+  animation: up-right 2s 1s;
+  animation-fill-mode: forwards;
+}
+
+.out-now {
+  width: 50%;
+  height: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.out-now h2 {
+  position: absolute;
+  opacity: 0;
+  animation: up-left 2s 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes up-right {
+  0% {
+    bottom: 0;
+    left: 10%;
+    opacity: 0;
+  }
+
+  50% {
+    bottom: 50%;
+    left: 10%;
+    opacity: .5;
+  }
+
+  100% {
+    bottom: 50%;
+    left: 90%;
+    opacity: 1;
+  }
+}
+
+@keyframes up-left {
+  0% {
+    bottom: 0;
+    right: 10%;
+    opacity: 0;
+  }
+
+  50% {
+    bottom: 45%;
+    right: 10%;
+    opacity: .5;
+  }
+
+  100% {
+    bottom: 45%;
+    right: 90%;
+    opacity: 1;
+  }
 }
 
 .scrollButton {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    width: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: auto;
 }
 
 .scrollButtonHide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .moreStuff {
-    bottom: .8em;
-    width: 40px;
-    height: 30px;
-    filter: invert(100%);
-    transition: 1s;
+  bottom: .8em;
+  width: 40px;
+  height: 30px;
+  filter: invert(100%);
+  transition: 1s;
 }
 
 @keyframes pulse_animation {
-    0% {
-        transform: scale(1);
-    }
-    30% {
-        transform: scale(1.08);
-    }
-    40% {
-        transform: scale(1.16);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    60% {
-        transform: scale(1.16);
-    }
-    70% {
-        transform: scale(1.08);
-    }
-    80% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.08);
+  }
+
+  40% {
+    transform: scale(1.16);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(1.16);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  80% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .pulse {
-    animation-name: pulse_animation;
-    animation-duration: 1000ms;
-    transform-origin: 70% 70%;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  animation-name: pulse_animation;
+  animation-duration: 1000ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .about {
-    background: #eeeef5;
-    left: 0px;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4em;
+  background: #eeeef5;
+  left: 0px;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
 }
 
 .aboutContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
 }
 
 .aboutImg {
-    width: 50%;
-    max-height: 50%;
+  width: 50%;
+  max-height: 50%;
 }
 
 .aboutImg img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .aboutText {
-    padding-right: 5em;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+  padding-right: 5em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutText h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .aboutText hr {
-    width: 90%;
-    border: 1px solid black;
+  width: 90%;
+  border: 1px solid black;
 }
 
 .portfolio {
-    background: #2d475e;
-    color: #EAEBED;
-    left: 0px;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background: #2d475e;
+  color: #EAEBED;
+  left: 0px;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio h1 {
-    margin-top: 2em;
-    font-size: 4em;
+  margin-top: 2em;
+  font-size: 4em;
 }
 
 .portfolio h2 {
-    margin-top: 2em;
-    font-size: 2.75em;
+  margin-top: 2em;
+  font-size: 2.75em;
 }
 
 .videos {
-    text-align: center;
-    margin-bottom: 5em;
+  text-align: center;
+  margin-bottom: 5em;
 }
 
 .contact {
-    padding: 4em 0em 4em 0em;
-    background: #b5c9c9;
-    max-height: 100vh;
-    height: auto;
+  padding: 4em 0em 4em 0em;
+  background: #b5c9c9;
+  max-height: 100vh;
+  height: auto;
 }
 
 .contact div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  width: 100vw;
 }
 
 .email {
-    width: 40%;
-    margin-bottom: 1.5em;
-    text-align: center;
-    font-size: 1.7em;
-    border-radius: 15px;
-    border: none;
-    padding: .3em;
+  width: 40%;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-size: 1.7em;
+  border-radius: 15px;
+  border: none;
+  padding: .3em;
 }
 
 .message {
-    margin-bottom: 1.5em;
-    min-height: 8em;
-    resize: none;
-    width: 40%;
-    text-align: left;
-    font-size: 1em;
-    border-radius: 15px;
-    border: none;
-    padding: 1em;
+  margin-bottom: 1.5em;
+  min-height: 8em;
+  resize: none;
+  width: 40%;
+  text-align: left;
+  font-size: 1em;
+  border-radius: 15px;
+  border: none;
+  padding: 1em;
 }
 
 .submit {
-    font-size: 1.5em;
-    padding: .6em;
-    border-radius: 15px;
-    border: none;
-    background-color: ivory;
-    transition: .2s;
+  font-size: 1.5em;
+  padding: .6em;
+  border-radius: 15px;
+  border: none;
+  background-color: ivory;
+  transition: .2s;
 }
 
 .submit:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 footer {
-    background: #243B4A;
-    margin: 0;
-    width: 100vw;
-    max-height: 100vh;
-    padding-top: 1.5em;
+  background: #243B4A;
+  margin: 0;
+  width: 100vw;
+  max-height: 100vh;
+  padding-top: 1.5em;
 }
 
 .footer {
-    height: 7em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer a {
-    text-decoration: none;
-    color: #EAEBED;
-    font-size: 1.25em;
-    margin-bottom: .75em;
+  text-decoration: none;
+  color: #EAEBED;
+  font-size: 1.25em;
+  margin-bottom: .75em;
 }
 
 .socialIcons {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .socialIcons img {
-    padding: 0em 1em 0em 1em;
-    width: 4.5em;
-    height: auto;
-    filter: invert(100%);
-    border-radius: 50%;
+  padding: 0em 1em 0em 1em;
+  width: 4.5em;
+  height: auto;
+  filter: invert(100%);
+  border-radius: 50%;
 }
 
 .socialIcons img:hover {
-    animation: teeter 1.5s infinite;
+  animation: teeter 1.5s infinite;
 }
 
 @keyframes teeter {
-    25% {
-        transform: rotate(45deg);
-    }
-    75% {
-        transform: rotate(-45deg);
-    }
+  25% {
+    transform: rotate(45deg);
+  }
+
+  75% {
+    transform: rotate(-45deg);
+  }
 }
 
 @media (max-width: 1500px) {}
 
 @media (max-width: 1024px) {
-    .header h1 {
-        margin-left: 1em;
-    }
-    .header nav {
-        margin-right: 0em;
-        width: 50%;
-    }
-    .about {
-        padding: 1.2em .5em 1.5em .5em;
-    }
-    .aboutContainer {
-        flex-direction: column;
-        width: 100%;
-    }
-    .aboutText {
-        font-size: 1.5em;
-        width: 90%;
-        padding: 0;
-        align-items: center;
-    }
-    .aboutImg {
-        display: none;
-    }
-    .portfolio {
-        justify-content: space-between;
-    }
-    .portfolio h1 {
-        margin-top: 3em;
-        font-size: 2.5em;
-    }
-    .portfolio h2 {
-        margin-top: 1.5em;
-        margin-bottom: 0em;
-        font-size: 2em;
-    }
-    iframe {
-        width: 85vw;
-        margin-top: .2em;
-    }
-    .videos {
-        margin-bottom: 0em;
-    }
-    .video {
-        margin: 0;
-        padding: 0;
-    }
-    #contact {
-        padding: 2em 0em 2em 0em;
-    }
-    .email {
-        width: 80%;
-    }
-    .message {
-        width: 80%;
-        min-height: 10em;
-    }
-    .socialIcons img:hover {
-        transform: none;
-    }
+  .header h1 {
+    margin-left: 1em;
+  }
+
+  .header nav {
+    margin-right: 0em;
+    width: 50%;
+  }
+
+  .about {
+    padding: 1.2em .5em 1.5em .5em;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aboutText {
+    font-size: 1.5em;
+    width: 90%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .aboutImg {
+    display: none;
+  }
+
+  .portfolio {
+    justify-content: space-between;
+  }
+
+  .portfolio h1 {
+    margin-top: 3em;
+    font-size: 2.5em;
+  }
+
+  .portfolio h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    font-size: 2em;
+  }
+
+  iframe {
+    width: 85vw;
+    margin-top: .2em;
+  }
+
+  .videos {
+    margin-bottom: 0em;
+  }
+
+  .video {
+    margin: 0;
+    padding: 0;
+  }
+
+  #contact {
+    padding: 2em 0em 2em 0em;
+  }
+
+  .email {
+    width: 80%;
+  }
+
+  .message {
+    width: 80%;
+    min-height: 10em;
+  }
+
+  .socialIcons img:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 736px) {
-    .header {
-        width: 100vw;
-        top: 0;
-    }
-    .header h1 {
-        display: none;
-    }
-    .skip {
-        display: block;
-        position: absolute;
-        margin-right: .75em;
-        margin-top: .4em;
-        right: 0;
-        transition: 1s;
-    }
-    .menuIcon {
-        transform: inherit;
-        transition: .4s;
-    }
-    #menuIcon.clicked {
-        transform: rotate(-90deg);
-        transition: .4s;
-    }
-    #menuIcon.menuIconInvert {
-        filter: invert(0%);
-    }
-    .navMenu {
-        transition: .3s;
-    }
-    #navMenu.open {
-        margin-left: .2em;
-        margin-right: 3.5em;
-        right: 0;
-        opacity: 1;
-    }
-    #navMenu {
-        width: 70%;
-        margin-right: 10em;
-        opacity: 0;
-        transition: .3s;
-    }
-    .about {
-        padding: 4em .5em 4em .5em;
-    }
-    .aboutContainer {
-        flex-direction: column;
-        width: 100%;
-    }
-    .aboutText {
-        font-size: .9em;
-        width: 95%;
-        padding: 0;
-        align-items: center;
-    }
-    .aboutImg {
-        display: none;
-    }
-    .portfolio {
-        justify-content: space-between;
-    }
-    .portfolio h1 {
-        margin-top: 3em;
-        font-size: 2.5em;
-    }
-    .portfolio h2 {
-        margin-top: 1.5em;
-        margin-bottom: 0em;
-        font-size: 2em;
-    }
-    iframe {
-        width: 85vw;
-        margin-top: .2em;
-    }
-    .videos {
-        margin-bottom: 0em;
-    }
-    .video {
-        margin: 0;
-        padding: 0;
-    }
-    #contact {
-        padding: 2em 0em 2em 0em;
-    }
-    .email {
-        width: 80%;
-    }
-    .message {
-        width: 80%;
-        min-height: 10em;
-    }
-    .socialIcons img:hover {
-        transform: none;
-    }
+  .header {
+    width: 100vw;
+    top: 0;
+  }
+
+  .header h1 {
+    display: none;
+  }
+
+  .skip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: .5em;
+    right: 0;
+    height: 4em;
+    width: 4em;
+  }
+
+  .menu-bar {
+    height: 3px;
+    width: 2.25em;
+    margin: .25em auto;
+    background: #fff;
+    transition: .5s;
+    transform-origin: 3% 0%;
+  }
+
+  .black .menu-bar {
+    background: #000;
+  }
+
+  [id^=bar] {
+    position: relative;
+  }
+
+  .open #bar-1 {
+    transform: rotate(45deg);
+    bottom: 1px
+  }
+
+  .open #bar-2 {
+    transform: skewY(-43deg);
+    opacity: 0;
+  }
+
+  .open #bar-3 {
+    transform: rotate(-45deg);
+    top: 1px;
+    right: 2px;
+  }
+
+  .menuIcon {
+    transform: inherit;
+    transition: .4s;
+  }
+
+  #menuIcon.clicked {
+    transform: rotate(-90deg);
+    transition: .4s;
+  }
+
+  #menuIcon.menuIconInvert {
+    filter: invert(0%);
+  }
+
+  .navMenu a {
+    transition: .3s;
+  }
+
+  #navMenu.open {
+    margin-left: .2em;
+    margin-right: 3.5em;
+    right: 0;
+    opacity: 1;
+  }
+
+  #navMenu {
+    width: 70%;
+    margin-right: 10em;
+    opacity: 0;
+    transition: .3s;
+  }
+
+  .about {
+    padding: 4em .5em 4em .5em;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aboutText {
+    font-size: .9em;
+    width: 95%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .aboutImg {
+    display: none;
+  }
+
+  .portfolio {
+    justify-content: space-between;
+  }
+
+  .portfolio h1 {
+    margin-top: 3em;
+    font-size: 2.5em;
+  }
+
+  .portfolio h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    font-size: 2em;
+  }
+
+  iframe {
+    width: 85vw;
+    margin-top: .2em;
+  }
+
+  .videos {
+    margin-bottom: 0em;
+  }
+
+  .video {
+    margin: 0;
+    padding: 0;
+  }
+
+  #contact {
+    padding: 2em 0em 2em 0em;
+  }
+
+  .email {
+    width: 80%;
+  }
+
+  .message {
+    width: 80%;
+    min-height: 10em;
+  }
+
+  .socialIcons img:hover {
+    transform: none;
+  }
 }
